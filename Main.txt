@@ -1,0 +1,26 @@
+package praktikum5;
+
+public class Main {
+    public static void main(String[] args) {
+    CarRider Park = new CarRider("Park Seyi",40,"081345786543");
+    CarRider Yee = new CarRider("Seo Yee Jhi",26,"083876987513");
+    CarRider Lisa = new CarRider("Lisa Lalisa ",20,"085765432190");
+    CarRider Lee = new CarRider("Lee Do Hyun",39,"082987654142");  
+    
+    CarData data = new CarData();
+    data.addCar("CROSSOVER","W 6541 OP", "Toyota C-HR");
+    data.addCar("STATION WAGON","P 4532 KL", "Mini Cooper");
+    data.addCar("COUPE","B 6001 GC", "Lexus RC");
+    data.addCar("LCGC","F 56421 HH", "Daihatsu Sigra");
+    
+    data.listOfCar();
+    RentArchieve arsip = new RentArchieve();
+    arsip.Rent(Lisa, data.carList.get(1), 4);
+    arsip.Rent(Yee, data.carList.get(1), 8);
+    arsip.Rent(Park, data.carList.get(2), 11);
+    arsip.Rent(Lee, data.carList.get(3), 6);
+    
+    System.out.println("");
+    arsip.info();
+    }
+}
